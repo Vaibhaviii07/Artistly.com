@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function OnboardPage() {
   const [form, setForm] = useState({
@@ -60,25 +61,26 @@ export default function OnboardPage() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
        
         <div className="space-y-6 px-4">
-          <img
-            src="/photo.jpg"
-            alt="event"
-            className="rounded-xl shadow-md w-full max-w-md mx-auto"
-          />
-          <div>
-  <h2 className="text-3xl sm:text-4xl font-extrabold text-purple-700">
-    Join Our Talent Network & Shine On Stage!
-  </h2>
-  <p className="text-gray-700 mt-4">
-    Are you a passionate performer? Whether you're a singer, dancer, speaker, or DJ – Artistly connects you with live events and opportunities across India.
-  </p>
-  <p className="text-gray-700 mt-2">
-    Join our vibrant community of artists, share your unique talent, and get discovered by event organizers looking for talent like yours.
-  </p>
-</div>
+         <Image
+        src="/photo.jpg"
+         alt="event"
+         width={500}
+        height={400}
+        className="rounded-xl shadow-md w-full max-w-md mx-auto"
+/>
 
+      <div>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-purple-700">
+          Join Our Talent Network & Shine On Stage!
+        </h2>
+        <p className="text-gray-700 mt-4">
+          Are you a passionate performer? Whether you&apos;re a singer, dancer, speaker, or DJ – Artistly connects you with live events and opportunities across India.
+        </p>
+        <p className="text-gray-700 mt-2">
+           Join our vibrant community of artists, share your unique talent, and get discovered by event organizers looking for talent like yours.
+        </p>
+      </div>
         </div>
-
         <div className="bg-white shadow-xl rounded-xl p-8 border border-gray-200 w-full max-w-md mx-auto">
           <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
             Join Us Today

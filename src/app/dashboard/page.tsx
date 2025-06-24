@@ -27,7 +27,8 @@ const mockArtists = [
 ];
 
 export default function ManagerDashboard() {
-  const [artists, setArtists] = useState(mockArtists);
+  const [artists] = useState(mockArtists);
+
 
   const handleAction = (name: string) => {
     alert(`Viewing profile for ${name}`);
